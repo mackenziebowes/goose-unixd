@@ -1,0 +1,9 @@
+# Install as ~/.config/systemd/user/goose-echo.socket, then: systemctl --user enable --now goose-echo.socket
+[Unit]
+Description=goose-unixd echo socket
+
+[Socket]
+ListenStream=%t/goose-echo.sock
+
+[Install]
+WantedBy=sockets.target

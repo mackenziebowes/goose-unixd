@@ -1,0 +1,7 @@
+# Install as ~/.config/systemd/user/goose-echo.service. Change ExecStart to where you built examples/echo.
+[Unit]
+Description=goose-unixd echo service
+Requires=goose-echo.socket
+
+[Service]
+ExecStart=%h/goose-unixd/examples/echo
